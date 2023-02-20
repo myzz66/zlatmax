@@ -1,0 +1,131 @@
+.catalog-wide-items {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.catalog-wide-item {
+  position: relative;
+  width: 32%;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.catalog-wide-item:hover {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.795);
+}
+
+.catalog-wide-item_content {
+  margin-top: 30px;
+  margin-left: 28px;
+  display: flex;
+}
+
+.catalog-wide-item_text {
+  padding-bottom: 20%;
+  z-index: 5;
+}
+
+.catalog-wide_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  position: relative;
+}
+
+.catalog-wide_title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 15px;
+  height: 2px;
+  width: 68px;
+  background-color: #e8aa31;
+}
+
+.catalog-wide_links {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-wide_links li {
+  list-style: inside;
+  list-style-position: outside;
+  color: #e8aa31;
+  margin-left: 20px;
+}
+
+.catalog-wide_link {
+  color: #000;
+  line-height: 34px;
+  margin-bottom: 10px;
+}
+
+.catalog-wide_link:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.catalog-wide_img {
+  position: absolute;
+  height: 80%;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+}
+.catalog-wide_pic {
+  object-fit: contain;
+  height: 100%;
+}
+
+@media (max-width: 1352px) {
+  .catalog-wide-item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 1099px) {
+  .catalog-wide-item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 698px) {
+  .catalog-wide-items {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .catalog-wide-item {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .catalog-wide-item_content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .catalog-wide-item_text {
+    padding-bottom: 5%;
+  }
+  .catalog-wide_img {
+    position: static;
+  }
+}
+
+@media (max-width: 499px) {
+  .catalog-wide-item {
+    width: 90%;
+  }
+  .catalog-wide-item_content {
+    margin-top: 15px;
+    margin-left: 18px;
+  }
+  .catalog-wide_title {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  .catalog-wide_link {
+    font-size: 18px;
+  }
+}
